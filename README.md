@@ -92,4 +92,4 @@ Puedes abrir issues, enviar pull requests o sugerencias.
 ---
 
 ## ✨ Autor
-Desarrollado por **[Cr4ZyG0d]**
+Desarrollado por **Cr4ZyG0d**
