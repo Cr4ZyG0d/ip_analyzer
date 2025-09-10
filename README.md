@@ -68,8 +68,6 @@ Ideal para tareas de auditoría, pentesting, administración de redes o simpleme
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 8.8.8.8 | Conectado | United States | Ashburn | Google LLC | Google Public DNS | AS15169 Google LLC | 39.03,-77.5 | dns.google | arin | Desconocido | Google LLC | 2000-03-30 | 53,443 |
 
-*Export as CSV*
-
 ---
 
 ## 🧩 Opciones
