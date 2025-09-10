@@ -82,20 +82,16 @@ def merge_whois_data(whois_data, ipwhois_data):
     """Fusiona datos de WHOIS y RDAP/IPWhois de forma robusta."""
     def pick(*fields):
         for f in fields:
-            # Si es lista, toma el primer elemento
             if isinstance(f, list) and f:
                 f = f[0]
-            # Si es dict, intenta obtener un valor representativo
             if isinstance(f, dict):
                 f = f.get('description', '') or f.get('name', '') or str(f)
-            # Convierte a string y limpia
             if isinstance(f, str) and f.strip() and f.strip().lower() != 'desconocido':
                 return f.strip()
             elif f and str(f).strip().lower() != 'desconocido':
                 return str(f).strip()
         return "Desconocido"
     
-    # ¡IMPORTANTE! Ahora sí retorna el diccionario fusionado:
     return {
         "name": pick(whois_data.get("name", ""), ipwhois_data.get("name", "")),
         "creation": pick(whois_data.get("creation", ""), ipwhois_data.get("creation", "")),
@@ -119,6 +115,31 @@ def parse_ips(args):
             return [line.strip() for line in f if line.strip()]
     else:
         return args.ips
+       
+COLORS = [
+    '\033[1;37m',  # IP - Blanco brillante
+    '\033[1;32m',  # Estado - Verde
+    '\033[1;34m',  # País - Azul
+    '\033[1;36m',  # Ciudad - Cian
+    '\033[1;35m',  # ISP - Magenta
+    '\033[1;33m',  # Org Geo - Amarillo
+    '\033[1;31m',  # ASN - Rojo
+    '\033[0;36m',  # Lat/Lon - Cian claro
+    '\033[1;30m',  # PTR - Gris
+    '\033[0;35m',  # Registrar - Magenta claro
+    '\033[0;33m',  # Org WHOIS - Amarillo claro
+    '\033[0;32m',  # Nombre - Verde claro
+    '\033[0;34m',  # Creacion - Azul claro
+    '\033[0;31m',  # Puertos abiertos - Rojo claro
+]
+RESET = '\033[0m'
+
+def print_colored_row(row):
+    colored = []
+    for i, val in enumerate(row):
+        color = COLORS[i % len(COLORS)]
+        colored.append(f"{color}{val}{RESET}")
+    print(" | ".join(colored))
 
 def main():
     parser = argparse.ArgumentParser(description="Analizador avanzado de IPs")
@@ -170,9 +191,9 @@ def main():
             writer.writerows(results)
         print(f"Resultados guardados en {args.output}")
     else:
-        print(" | ".join(headers))
+        print_colored_row(headers)
         for row in results:
-            print(" | ".join(row))
+            print_colored_row(row)
 
 if __name__ == "__main__":
     main()
