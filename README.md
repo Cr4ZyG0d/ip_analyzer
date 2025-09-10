@@ -66,7 +66,7 @@ Ideal para tareas de auditoría, pentesting, administración de redes o simpleme
 
 | IP | Estado | Pais | Ciudad | ISP | Org Geo | ASN | Lat/Lon | PTR | Registrar | Org WHOIS | Nombre | Creacion | Puertos abiertos |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 8.8.8.8 | Conectado | United States | Mountain View | Google LLC | Google LLC | AS15169 | 37.386,-122.083 | dns.google | arin | Google LLC | Google | 1996-10-10 | 53,80,443 |
+| 8.8.8.8 | Conectado | United States | Ashburn | Google LLC | Google Public DNS | AS15169 Google LLC | 39.03,-77.5 | dns.google | arin | Desconocido | Google LLC | 2000-03-30 | 53,443 |
 
 *Export as CSV*
 
