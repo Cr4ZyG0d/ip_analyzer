@@ -23,7 +23,7 @@ Ideal para tareas de auditoría, pentesting, administración de redes o simpleme
 1.  **Clona el repositorio:**
     ```bash
     git clone https://github.com/Cr4ZyG0d/ip_analyzer.git
-    cd ip-analyzer
+    cd ip_analyzer
     ```
 
 2.  **Instala las dependencias:**
