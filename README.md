@@ -47,7 +47,7 @@ Ideal para tareas de auditoría, pentesting, administración de redes o simpleme
 
 * **Analizar IPs desde archivo:**
     ```bash
-    python3 ip_analyzer.py -f ip_files.txt
+    python3 ip_analyzer.py -f list_ip.txt
     ```
 
 * **Analizar IPs desde línea de comandos:**
@@ -57,7 +57,7 @@ Ideal para tareas de auditoría, pentesting, administración de redes o simpleme
 
 * **Guardar resultados en CSV:**
     ```bash
-    python3 ip_analyzer.py -f ip_files.txt -o resultados.csv
+    python3 ip_analyzer.py -f list_ip.txt -o result.csv
     ```
 
 ---
